@@ -1,5 +1,18 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'maven-publish'
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.mint'
+                artifactId = 'mint-android-app2'
+                version = '0.0.4'
+            }
+        }
+    }
+}
 buildscript {
     ext.kotlin_version = '1.9.0'
     repositories {
