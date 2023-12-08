@@ -38,7 +38,10 @@ android {
         abortOnError false
     }
     namespace 'com.dmitrybrant.modelviewer'
+
 }
+
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
